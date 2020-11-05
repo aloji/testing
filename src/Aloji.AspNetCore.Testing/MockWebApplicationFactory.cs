@@ -11,7 +11,7 @@ namespace Aloji.AspNetCore.Testing
     public class MockWebApplicationFactory<TStartup> : WebApplicationFactory<TStartup>
         where TStartup : class
     {
-        readonly IMockFactory Mocks;
+        public IMockFactory Mocks { get; private set; }
    
         public MockWebApplicationFactory(IMockFactory iMockFactory)
         {
