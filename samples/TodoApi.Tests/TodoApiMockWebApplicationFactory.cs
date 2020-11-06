@@ -1,7 +1,7 @@
 ﻿using Aloji.AspNetCore.Testing;
 using Aloji.AspNetCore.Testing.Mocks;
 using Microsoft.Extensions.Configuration;
-using TodoApi.Tests.Mocks;
+using TodoApi.Tests.Mocks.Extensions;
 
 namespace TodoApi.Tests
 {

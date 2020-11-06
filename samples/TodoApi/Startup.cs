@@ -26,7 +26,7 @@ namespace TodoApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<IForecastService, ForecastService>();
+            services.AddSingleton<IForecastRepository, ForecastRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

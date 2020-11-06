@@ -8,18 +8,18 @@ namespace TodoApi.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private readonly IForecastService iForecastService;
+        private readonly IForecastRepository iForecastrepository;
 
-        public WeatherForecastController(IForecastService iForecastService)
+        public WeatherForecastController(IForecastRepository iForecastrepository)
         {
-            this.iForecastService = iForecastService 
-                ?? throw new ArgumentNullException(nameof(iForecastService));
+            this.iForecastrepository = iForecastrepository 
+                ?? throw new ArgumentNullException(nameof(iForecastrepository));
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            return this.iForecastService.Get();
+            return this.iForecastrepository.Get();
         }
     }
 }

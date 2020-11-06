@@ -2,7 +2,7 @@
 
 namespace TodoApi
 {
-    public interface IForecastService
+    public interface IForecastRepository
     {
         IEnumerable<WeatherForecast> Get();
     }

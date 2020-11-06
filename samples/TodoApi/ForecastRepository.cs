@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TodoApi
 {
-    public class ForecastService : IForecastService
+    public class ForecastRepository : IForecastRepository
     {
         private static readonly string[] Summaries = new[]
         {

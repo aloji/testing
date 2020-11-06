@@ -2,7 +2,6 @@ using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
@@ -13,7 +12,7 @@ namespace TodoApi.Tests.WeatherForecastControllerTests
     [Collection(nameof(TodoApiCollection))]
     public class GetTests
     {
-        readonly IForecastService iForecastService;
+        readonly IForecastRepository iForecastRepository;
         readonly HttpClient httpClient;
 
         public GetTests(TodoApiMockWebApplicationFactory factory)
@@ -21,7 +20,7 @@ namespace TodoApi.Tests.WeatherForecastControllerTests
             _ = factory ?? throw new ArgumentNullException(nameof(factory));
             factory.Mocks.Clear();
 
-            this.iForecastService = factory.Mocks.Get<IForecastService>(); 
+            this.iForecastRepository = factory.Mocks.Get<IForecastRepository>(); 
             this.httpClient = factory.CreateDefaultClient();
         }
 
@@ -37,7 +36,7 @@ namespace TodoApi.Tests.WeatherForecastControllerTests
                     TemperatureC = 20
                 }
             };
-            this.iForecastService.Get().Returns(expected);
+            this.iForecastRepository.Get().Returns(expected);
 
             var actual = await httpClient.GetFromJsonAsync<IEnumerable<WeatherForecast>>("/WeatherForecast");
 
