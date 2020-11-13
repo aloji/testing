@@ -6,10 +6,10 @@ namespace Aloji.AspNetCore.Testing.Mocks
 {
     public class MockFactory : IMockFactory
     {
-        private readonly ServiceProvider serviceProvider;
+        private readonly IServiceProvider serviceProvider;
         private readonly IEnumerable<Action<IServiceCollection, IServiceProvider>> replaceActions;
 
-        public MockFactory(ServiceProvider serviceProvider, 
+        public MockFactory(IServiceProvider serviceProvider, 
             IEnumerable<Action<IServiceCollection, IServiceProvider>> replaceActions)
         {
             this.serviceProvider = serviceProvider 
@@ -18,7 +18,7 @@ namespace Aloji.AspNetCore.Testing.Mocks
             this.replaceActions = replaceActions;
         }
 
-        public TService Get<TService>()
+        public virtual TService Get<TService>()
             where TService : class
         {
             var iMock = this.serviceProvider.GetService<IMock<TService>>();
@@ -27,17 +27,18 @@ namespace Aloji.AspNetCore.Testing.Mocks
             return iMock.Instance;
         }
 
-        public void Clear()
+        public virtual void Clear()
         {
             var iMocks = this.serviceProvider.GetServices<IMock>();
             foreach (var item in iMocks)
                 item.Clear();
         }
 
-        public void Replace(IServiceCollection apiServices)
+        public virtual void Replace(IServiceCollection apiServices)
         {
             if (this.replaceActions == null)
                 return;
+
             foreach (var action in this.replaceActions)
             {
                 action(apiServices, this.serviceProvider);

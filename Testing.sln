@@ -7,13 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C4F8ADD3-F64
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aloji.AspNetCore.Testing", "src\Aloji.AspNetCore.Testing\Aloji.AspNetCore.Testing.csproj", "{99E56F95-C9A1-427F-9933-9F3D7A4C2BD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aloji.AspNetCore.Testing.NSubstitute", "src\Aloji.AspNetCore.Testing.NSubstitute\Aloji.AspNetCore.Testing.NSubstitute.csproj", "{C6BE59B3-8277-44E4-AF7B-19C600125F50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aloji.AspNetCore.Testing.NSubstitute", "src\Aloji.AspNetCore.Testing.NSubstitute\Aloji.AspNetCore.Testing.NSubstitute.csproj", "{C6BE59B3-8277-44E4-AF7B-19C600125F50}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{28769AD9-E6D1-484A-8A97-8D5A4768A63E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi", "samples\TodoApi\TodoApi.csproj", "{E1C6869E-C644-44B8-8D67-3BB907B99D7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "samples\TodoApi\TodoApi.csproj", "{E1C6869E-C644-44B8-8D67-3BB907B99D7A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi.Tests", "samples\TodoApi.Tests\TodoApi.Tests.csproj", "{34886ADB-D1A0-40AD-B25E-168546A0B134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aloji.AspNetCore.Testing.UnitTests", "tests\Aloji.AspNetCore.Testing.UnitTests\Aloji.AspNetCore.Testing.UnitTests.csproj", "{B1209307-AEEC-43BB-BDC4-BD44CA24D606}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DA67A7A1-FDD3-4AD3-ADAA-F0D94E2A038D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,10 @@ Global
 		{34886ADB-D1A0-40AD-B25E-168546A0B134}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34886ADB-D1A0-40AD-B25E-168546A0B134}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34886ADB-D1A0-40AD-B25E-168546A0B134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1209307-AEEC-43BB-BDC4-BD44CA24D606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1209307-AEEC-43BB-BDC4-BD44CA24D606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1209307-AEEC-43BB-BDC4-BD44CA24D606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1209307-AEEC-43BB-BDC4-BD44CA24D606}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +54,7 @@ Global
 		{C6BE59B3-8277-44E4-AF7B-19C600125F50} = {C4F8ADD3-F649-4F75-A2EE-5399F211DB5C}
 		{E1C6869E-C644-44B8-8D67-3BB907B99D7A} = {28769AD9-E6D1-484A-8A97-8D5A4768A63E}
 		{34886ADB-D1A0-40AD-B25E-168546A0B134} = {28769AD9-E6D1-484A-8A97-8D5A4768A63E}
+		{B1209307-AEEC-43BB-BDC4-BD44CA24D606} = {DA67A7A1-FDD3-4AD3-ADAA-F0D94E2A038D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92098228-8EA9-4232-86C5-FA459F372535}

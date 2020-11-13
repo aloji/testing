@@ -22,7 +22,7 @@ namespace Aloji.AspNetCore.Testing.Mocks
             return result;
         }
 
-        public IMockBuilder AddMock<TService, TMock>()
+        public virtual IMockBuilder AddMock<TService, TMock>()
             where TService : class
             where TMock : class, IMock<TService>
         {
