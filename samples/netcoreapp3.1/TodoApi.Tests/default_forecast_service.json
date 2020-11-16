@@ -1,0 +1,11 @@
+{
+  "ForecastServiceOptions": {
+    "Get": [
+      {
+        "Date": "2020-10-01",
+        "TemperatureC": 20,
+        "Summary": "Winter"
+      }
+    ]
+  }
+}

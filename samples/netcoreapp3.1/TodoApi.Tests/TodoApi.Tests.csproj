@@ -16,9 +16,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Aloji.AspNetCore.Testing.NSubstitute\Aloji.AspNetCore.Testing.NSubstitute.csproj" />
-    <ProjectReference Include="..\..\src\Aloji.AspNetCore.Testing\Aloji.AspNetCore.Testing.csproj" />
+    <ProjectReference Include="..\..\..\src\Aloji.AspNetCore.Testing.NSubstitute\Aloji.AspNetCore.Testing.NSubstitute.csproj" />
+    <ProjectReference Include="..\..\..\src\Aloji.AspNetCore.Testing\Aloji.AspNetCore.Testing.csproj" />
     <ProjectReference Include="..\TodoApi\TodoApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="default_forecast_service.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
